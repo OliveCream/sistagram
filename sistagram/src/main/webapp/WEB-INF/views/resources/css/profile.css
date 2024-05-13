@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+        body {
+            font: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+/*         section { */
+/*             max-width: 600px; */
+/*             margin: 20px auto; */
+/*             padding: 20px; */
+/*             border-radius: 8px; */
+/*             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+/*             position: relative; */
+/*         } */
+
+        .section-img {
+            max-width: 750px;
+            max-heigth: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 20px;
+            position: relative;
+            background-color:#ivory;
+            display: flex; 
+            align-items: center;"
+/*             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); */
+        }
+
+
+        .section-submit {
+            position: relative;
+            max-width: 1000px;
+            height: auto;
+            margin: 20px auto;
+            margin-left:25% ;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 150%;
+        }
+        
+        label {
+        	font-size: 15px;
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 0px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        
+        .input-search {
+            width: 500px;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            border: 0px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color:#ebebeb;
+            outline: none; /* 클릭시 테두리 제거 */
+        }
+        
+        .showPw {
+		    position: absolute;
+		    top: 55%;
+		    right: 5%;
+		    width: auto;
+		    height: auto;
+		    transform: translateY(-50%);
+		    cursor: pointer;
+		    border: none;
+		    background-color: #fff;
+		    visibility: hidden;
+		    position: absolute; 
+/* 			vertical-align: middle; */
+		}
+
+
+
+
+        
+        .user-list:hover{
+        	background-color: #ebebeb;
+        }
+        
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    float: left; /* 이미지를 왼쪽으로 배치 */
+}
+
+.boardUpload-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+    margin-bottom: 0px;
+}
+
+.userId-container{
+	font-weight:bold;
+	font-size:20px;
+}
+.userName-container {
+	font-weight:bold;
+	font-size:14px;
+}
+.follow-board{
+	
+}
+.userIntro-container{
+	font-size:12px;
+}
+.button-img {
+    background-color: #2c84dc;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+/*             font-weight: bold; */
+    font: inherit;
+    position: relative;
+}
+
+.userInfo-container {
+    float: right; /* 버튼을 오른쪽으로 배치 */
+    margin-top: 10px; /* 원하는 위치로 조정 */
+    margin-left: 100px;
+}
+.profile-image-container{
+/* 	margin-right:10%; */
+}
+
+.profile-boardImg {
+	width: 300px; 
+	height: 300px; 
+	margin:0.5px 2px; 
+	object-fit: cover;
+	cursor:pointer;
+	
+}
+
+.profile-boardImg:hover{
+	filter:brightness(0.5);
+}
+
+
+
+
+/* 이미지 컨테이너 스타일 */
+.boardImg-container{
+	position: relative; /* 요소의 위치를 상대적으로 설정 */
+	display: inline-block; /* 인라인 블록 요소로 표시 */
+	
+}
+
+/* 이미지 위에 오버레이 스타일 */
+.boardImg-container .overlay {
+	position: absolute; /* 요소를 절대적으로 배치 */
+	top: 0; /* 상단 여백을 0으로 설정 */
+	left: 0; /* 왼쪽 여백을 0으로 설정 */
+	width: 300px; /* 가로 길이를 100%로 설정 */
+	height: 300px; /* 세로 길이를 100%로 설정 */
+	opacity: 0; /* 초기에는 투명하게 설정 */
+	transition: opacity 0.3s ease; /* 변화에 부드러운 효과 적용 */
+	background-color: rgba(0, 0, 0, 0.5); /* 어두운 배경색 (투명도 조절 가능) */
+	margin:0.5px 2px;
+	cursor:pointer;
+}
+
+/* 이미지 컨테이너에 호버됐을 때 오버레이의 투명도 조절 */
+.boardImg-container:hover .overlay {
+  opacity: 1; /* 호버 시 투명도를 1로 설정하여 오버레이 표시 */
+}
+
+/* 하트 아이콘 스타일 */
+.boardImg-container .heart-icon {
+	position: absolute; /* 요소를 절대적으로 배치 */
+	top: 50%; /* 위쪽 여백을 50%로 설정 */
+	left: 50%; /* 왼쪽 여백을 50%로 설정 */
+	transform: translate(-50%, -50%); /* 요소를 수직 및 수평으로 정확히 가운데로 이동 */
+	color: transparent; /* 투명한 색상으로 설정하여 초기에 숨김 */
+	font-size: 24px; /* 폰트 크기를 24px로 설정 */
+	opacity: 0; /* 초기에는 투명하게 설정 */
+	transition: opacity 0.3s ease; /* 변화에 부드러운 효과 적용 */
+}
+
+/* 이미지 컨테이너에 호버됐을 때 하트 아이콘의 색상 및 표시 여부 조절 */
+.boardImg-container:hover .heart-icon {
+	color: white; /* 하트의 색상 */
+	opacity: 1; /* 마우스 호버시 투명도1로 하트 표시 */
+}
+
+
+
+.numberr{
+	font-size:16px; 
+	font-weight:bold; 
+	display: inline;
+	position: relative; 
+	top: -3px;
+}
+
+		
+		
+        
+        
